@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=sqlite:////data/videos.db
+      - YOUTUBE_API_KEYS=${YOUTUBE_API_KEYS}
+      - YOUTUBE_SEARCH_QUERY=cricket
+      - FETCH_INTERVAL_SECONDS=10
+    volumes:
+      - ./data:/data
