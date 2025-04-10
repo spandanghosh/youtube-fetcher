@@ -1,6 +1,4 @@
-# Youtube Video Fetcher
-!{Python](https://img.shields.io/badge/python-3.9+-blue)
-[200~# YouTube Video Fetcher
+# YouTube Video Fetcher
 
 ![Python](https://img.shields.io/badge/python-3.9+-blue)
 ![Flask](https://img.shields.io/badge/flask-2.0+-lightgrey)
@@ -32,5 +30,5 @@ A backend service that fetches cricket videos from YouTube API and provides sear
 ### Setup
 1. Clone repository:
    ```bash
-   git clone https://github.com/yourusername/youtube-fetcher.git
+   git clone https://github.com/spandanghosh/youtube-fetcher.git
    cd youtube-fetcher
