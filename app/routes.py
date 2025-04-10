@@ -1,11 +1,11 @@
 # app/routes.py
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from app import db
 from app.models import Video
 from datetime import datetime
 import re
 
-api_blueprint = Blueprint('api', __name__)
+api_blueprint = Blueprint('api', __name__, url_prefix='/api')
 
 @api_blueprint.route('/videos', methods=['GET'])
 def get_videos():
@@ -56,3 +56,7 @@ def search_videos():
         'pages': videos.pages,
         'current_page': videos.page
     })
+@api_blueprint.route('/dashboard')
+def serve_dashboard():
+    """Serve the video dashboard HTML"""
+    return render_template('dashboard/index.html')

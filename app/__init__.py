@@ -1,4 +1,3 @@
-# app/__init__.py
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -13,7 +12,7 @@ def create_app():
 
     with app.app_context():
         from app.routes import api_blueprint
-        app.register_blueprint(api_blueprint)
+        app.register_blueprint(api_blueprint, url_prefix='/api')  # Added url_prefix here
 
         db.create_all()
 

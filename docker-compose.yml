@@ -11,5 +11,9 @@ services:
       - YOUTUBE_API_KEYS=${YOUTUBE_API_KEYS}
       - YOUTUBE_SEARCH_QUERY=cricket
       - FETCH_INTERVAL_SECONDS=10
+      - GUNICORN_WORKERS=4
+      - GUNICORN_THREADS=2
+      - GUNICORN_BIND=0.0.0.0:5000
+      - GUNICORN_ACCESS_LOGFILE=-
     volumes:
       - ./data:/data
