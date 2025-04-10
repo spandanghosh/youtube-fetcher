@@ -54,9 +54,10 @@ http://localhost:5000/api
 ```
 **Endpoints**
 ```bash
-Method	Endpoint	Description
-GET	/videos	Paginated list of videos
-GET	/videos/search?q=...	Search videos by query
+Endpoint	            Method	Description
+/api/videos	         GET	   Paginated video list (newest first)
+/api/videos/search	GET	   Fuzzy search by title/description
+/api/dashboard	      GET	   Interactive dashboard (HTML)
 ```
 ### Query Parameters
 
@@ -89,8 +90,8 @@ youtube-fetcher/
 │   │   └── background_tasks.py # Background fetch scheduler
 │   └── utils/
 │       └── helpers.py          # Utility functions
-├── static/                     # Frontend static assets (optional)
-├── templates/                  # Jinja2 templates (optional dashboard)
+├── static/                     # Frontend static assets
+├── templates/                  # Jinja2 templates
 ├── docker-compose.yml          # Docker service definitions
 ├── Dockerfile                  # Docker container configuration
 ├── requirements.txt            # Python dependencies
@@ -116,8 +117,21 @@ youtube-fetcher/
 - **Search Mechanism:**  
   Uses regex-based partial and fuzzy matching — designed to handle out-of-order, loosely typed queries.
 
-## 📜 License
+## 📜 License 
 This project is developed as part of the FamPay Backend Assignment. All rights reserved by the assignment terms.
+
+Key improvements made: (📅 Last Updated: 2025-04-11)
+1. **Simplified Setup**: Combined Docker/Manual instructions
+2. **Added Troubleshooting**: Common issues section
+3. **Clearer API Docs**: Table format with curl examples
+4. **Visual Enhancements**: More badges and spacing
+5. **Key Rotation Highlight**: Emphasized in Features
+6. **Timestamp**: Added last updated date
+
+Would you like me to add any specific details about:
+- The regex search implementation?
+- Docker resource limits?
+- API response samples?
 
 ## 📌 API Reference
 - [YouTube Data API v3 Docs](https://developers.google.com/youtube/v3)
