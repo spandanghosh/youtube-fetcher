@@ -63,6 +63,9 @@ A backend service that fetches cricket videos from the YouTube API and provides 
   ]
 }
 ```
+### WebURL View
+![image](https://github.com/user-attachments/assets/c78d73f5-8941-4e23-a7c7-6f4f1af7fab1)
+
 ## Setup
 
 1. **Clone the repository**
@@ -166,11 +169,6 @@ Key improvements made: (📅 Last Updated: 2025-04-11)
 4. **Visual Enhancements**: More badges and spacing
 5. **Key Rotation Highlight**: Emphasized in Features
 6. **Timestamp**: Added last updated date
-
-Would you like me to add any specific details about:
-- The regex search implementation?
-- Docker resource limits?
-- API response samples?
 
 ## 📌 API Reference
 - [YouTube Data API v3 Docs](https://developers.google.com/youtube/v3)
