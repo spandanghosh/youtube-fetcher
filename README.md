@@ -4,7 +4,7 @@
 ![Flask](https://img.shields.io/badge/flask-2.0+-lightgrey)
 ![Docker](https://img.shields.io/badge/docker-3.8+-blue)
 
-A backend service that fetches cricket videos from the YouTube API and provides searchable REST endpoints.
+A scalable backend service with admin dashboard that auto-fetches cricket videos from YouTube API (10s refresh, multi-key failover) and serves them via REST APIs with full-text search.
 
 ---
 
